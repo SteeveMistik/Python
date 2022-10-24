@@ -66,6 +66,13 @@ def main():
         employee_name = str(input('\nWhat is the name of the employee? '))
 
         total_hours = float(input('\nHow many hours did the employee work for the week? '))
+        
+        if total_hours < 0 or total_hours > 168:
+            print('You need to enter a positive number between 0 and 168! Let\'s try again.')
+            total_hours = float(input('\nHow many hours did the employee work for the week? '))
+
+        else:
+            continue
 
         if total_hours > 40:
 
